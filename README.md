@@ -8,6 +8,8 @@ Run `npm ci` and `npm run workbench`, then open [the local workbench](http://127
 
 ![GuardRail buyer acceptance showing an Aevum rejection, returned funds, and the failed arithmetic check](docs/guardrail-acceptance.jpg)
 
+[Download the 3-minute English walkthrough](https://github.com/Betty227/GuardRail/releases/download/aevum-demo/guardrail-demo.mp4).
+
 ## Architecture and workflow
 
 1. The workbench builds a synthetic CSV or XML purchase order. The purchase service selects an eligible supplier by format and price.
