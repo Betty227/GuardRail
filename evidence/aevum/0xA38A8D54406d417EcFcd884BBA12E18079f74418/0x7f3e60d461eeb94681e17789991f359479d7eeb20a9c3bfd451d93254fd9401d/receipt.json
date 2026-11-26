@@ -1,0 +1,66 @@
+{
+  "canonicalization": "guardrail-report-v1",
+  "domain": {
+    "name": "GuardRail",
+    "version": "1",
+    "chainId": "44005",
+    "verifyingContract": "0xA38A8D54406d417EcFcd884BBA12E18079f74418"
+  },
+  "types": {
+    "Receipt": [
+      {
+        "type": "bytes32",
+        "name": "paymentId"
+      },
+      {
+        "type": "address",
+        "name": "merchant"
+      },
+      {
+        "type": "uint256",
+        "name": "amount"
+      },
+      {
+        "type": "bytes32",
+        "name": "inputHash"
+      },
+      {
+        "type": "bytes32",
+        "name": "outputHash"
+      },
+      {
+        "type": "bytes32",
+        "name": "rulesVersion"
+      },
+      {
+        "type": "uint64",
+        "name": "deadline"
+      }
+    ]
+  },
+  "receipt": {
+    "paymentId": "0x7f3e60d461eeb94681e17789991f359479d7eeb20a9c3bfd451d93254fd9401d",
+    "merchant": "0x0E8a61B99a6500Ce55B538Ab76b8B66527797690",
+    "amount": "100000",
+    "inputHash": "0xb89f7aed1a72476ea943910d8de4d568403dcff6fd09123bd39b8149f64a2189",
+    "outputHash": "0x805926585fb7d6b8f204ef8354f67f6c99ff79621068294fa8297928e0d303ad",
+    "rulesVersion": "0x9918f90adc23038dc6115e4f7407ba1cffecfd86ba7d4cbec2845cc7f0198160",
+    "deadline": 1795660864
+  },
+  "signature": "0xda9dfde1773d4329b423904c7c9bf6c304a6f0c312aa140473b9a2e010e3007762999dc79b0b0ed7b5286c25807ef55555b8f41ca2f1fff1d4195350d73427731b",
+  "verifier": "0x8eB3e62ddDeBc55004DA5A5ABDd1c4521Abe65e9",
+  "intent": "0x7f1cf728d427a67307954f8afd55a44b87eaf5ba49caa9e2b9b2722e57a85d6c",
+  "quote": {
+    "merchant": "0x0E8a61B99a6500Ce55B538Ab76b8B66527797690",
+    "amount": "100000",
+    "inputHash": "0xb89f7aed1a72476ea943910d8de4d568403dcff6fd09123bd39b8149f64a2189",
+    "serviceVersion": "0xb06e9cfcf827a66f0795edab3a3a9c9589a90899d1b3e9ff8ec1b1bf47cf59c8",
+    "rulesVersion": "0x9918f90adc23038dc6115e4f7407ba1cffecfd86ba7d4cbec2845cc7f0198160",
+    "deadline": 1795660864
+  },
+  "asset": "0x456569838f1d43009A91ebA4263147Afd7233483",
+  "transactions": {
+    "reserve": "0x40bee4c7c4d146532858cb378efba6eb1db1170ec05c48076e7ba7ff08f9bba1",
+    "capture": "0x4cc1508ea64d120f77c2be57735a8acb0992cbc9bf7aefe2f73cabbe97388466"
+  }
+}

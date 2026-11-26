@@ -1,0 +1,70 @@
+{
+  "reference": "order-rejected-001",
+  "mode": "aevum",
+  "chainId": 44005,
+  "vault": "0xA38A8D54406d417EcFcd884BBA12E18079f74418",
+  "paymentId": "0x23afb47c26439b3f4856469cfcba6e82811eebe2efd23559df7cbb0a2b0e43ae",
+  "format": "xml",
+  "merchant": "0x0E8a61B99a6500Ce55B538Ab76b8B66527797690",
+  "status": "rejected",
+  "fee": "0.1",
+  "paid": "0.00",
+  "checks": [
+    {
+      "id": "ORDER",
+      "label": "Order reference",
+      "status": "pass"
+    },
+    {
+      "id": "LINES",
+      "label": "Line completeness",
+      "status": "pass"
+    },
+    {
+      "id": "CURRENCY",
+      "label": "Currency",
+      "status": "pass"
+    },
+    {
+      "id": "SOURCE_FIELDS",
+      "label": "Source field match",
+      "status": "pass"
+    },
+    {
+      "id": "ARITHMETIC",
+      "label": "Arithmetic in HKD cents",
+      "status": "fail"
+    }
+  ],
+  "inputHash": "0xa46d5d6251aa7072ff15ec9ffbb0124208d3bbe1de8064975b2b2dc793128d17",
+  "outputHash": "0x8af228c0f0fd8ad79b00be634531e7f1f607f33666fa3849cd3f99452cdc60a6",
+  "budgetDay": 20783,
+  "authorizedAt": "2026-11-26T03:50:20.000Z",
+  "closedAt": "2026-11-26T03:50:25.000Z",
+  "transactions": {
+    "reserve": "0x1e90a1967138b859fe01ddce79a8b2bd4e80f1568d3d8b0ac72afcaf3590223a",
+    "void": "0x5b5171f5e9c1860953a7380e7a70439d2e37612ab7193a3b98c2907ac61669b2"
+  },
+  "submittedBy": "0x67765b6355fA70f2667Df4A138d8f02c1257Fd14",
+  "deadline": 1795668612,
+  "accounting": {
+    "before": {
+      "available": "100000",
+      "reserved": "0",
+      "used": "200000",
+      "merchant": "200000"
+    },
+    "held": {
+      "available": "0",
+      "reserved": "100000",
+      "used": "300000",
+      "merchant": "200000"
+    },
+    "after": {
+      "available": "100000",
+      "reserved": "0",
+      "used": "200000",
+      "merchant": "200000"
+    }
+  }
+}

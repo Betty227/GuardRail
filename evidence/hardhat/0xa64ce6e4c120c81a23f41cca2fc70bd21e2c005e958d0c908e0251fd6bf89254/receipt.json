@@ -1,0 +1,67 @@
+{
+  "canonicalization": "guardrail-report-v1",
+  "domain": {
+    "name": "GuardRail",
+    "version": "1",
+    "chainId": "31337",
+    "verifyingContract": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  },
+  "types": {
+    "Receipt": [
+      {
+        "name": "paymentId",
+        "type": "bytes32"
+      },
+      {
+        "name": "merchant",
+        "type": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "name": "inputHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "outputHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "rulesVersion",
+        "type": "bytes32"
+      },
+      {
+        "name": "deadline",
+        "type": "uint64"
+      }
+    ]
+  },
+  "receipt": {
+    "paymentId": "0xa64ce6e4c120c81a23f41cca2fc70bd21e2c005e958d0c908e0251fd6bf89254",
+    "merchant": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "amount": "100000",
+    "inputHash": "0xb89f7aed1a72476ea943910d8de4d568403dcff6fd09123bd39b8149f64a2189",
+    "outputHash": "0x805926585fb7d6b8f204ef8354f67f6c99ff79621068294fa8297928e0d303ad",
+    "rulesVersion": "0x9918f90adc23038dc6115e4f7407ba1cffecfd86ba7d4cbec2845cc7f0198160",
+    "deadline": 1795593521
+  },
+  "signature": "0xc47ed14598af5d4f834322541d0298344c5e88358be5ffa0e43c648448e53b0e1c4d33404cab0f0ed4faeeaacdf85b9ce17f87e76d2b87240ae4d31ad9fba8f51c",
+  "verifier": "0x025A2B94327EDF8cc9C590fE1c0FBf05465aAD33",
+  "intent": "0x1efffdd2b9c666c34bdde86b1d2d12b60ebe00c4a6865f7c45f6276f2f62cd2a",
+  "quote": {
+    "merchant": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "amount": "100000",
+    "inputHash": "0xb89f7aed1a72476ea943910d8de4d568403dcff6fd09123bd39b8149f64a2189",
+    "serviceVersion": "0xb06e9cfcf827a66f0795edab3a3a9c9589a90899d1b3e9ff8ec1b1bf47cf59c8",
+    "rulesVersion": "0x9918f90adc23038dc6115e4f7407ba1cffecfd86ba7d4cbec2845cc7f0198160",
+    "deadline": 1795593521
+  },
+  "asset": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "transactions": {
+    "reserve": "0x3d70148b8bd6b0ef3f042d01b98c27f927721863afae6707cbd2b4c5935c7ac4",
+    "retry": "0x1c73ba8cf5333b3d5f2b7c694b595cacc472cccb039706b50926cb099f8adb5a",
+    "capture": "0x5b3e48b7e1b4a98d89d63e33d7ca275430065d25cbc1fceb76cc0a84b8677478"
+  }
+}

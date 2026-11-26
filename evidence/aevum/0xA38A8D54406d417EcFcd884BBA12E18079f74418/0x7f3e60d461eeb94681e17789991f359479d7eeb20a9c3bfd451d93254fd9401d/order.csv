@@ -1,0 +1,3 @@
+order_id,currency,line_id,sku,qty,unit_minor,declared_minor
+DEMO-001,HKD,L1,PAPER,10,1200,12500
+DEMO-001,HKD,L2,CLIP,2,350,700

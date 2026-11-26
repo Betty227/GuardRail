@@ -1,0 +1,4 @@
+<order order_id="PO-order-rejected-001" currency="HKD">
+  <line line_id="L1" sku="PAPER" qty="21" unit_minor="1200" declared_minor="12500"/>
+  <line line_id="L2" sku="CLIP" qty="2" unit_minor="350" declared_minor="700"/>
+</order>

@@ -1,0 +1,40 @@
+{
+  "chainId": 44005,
+  "vault": "0xA38A8D54406d417EcFcd884BBA12E18079f74418",
+  "verifiedSource": "https://explorer-test.qday.info/address/0xA38A8D54406d417EcFcd884BBA12E18079f74418?tab=contract",
+  "purchases": [
+    {
+      "intent": "order-001",
+      "paymentId": "0xd564071f794d893f21e724eb93d59fd96b7f1882baa872a9d6a356fd30348f8e",
+      "settlement": "https://explorer-test.qday.info/tx/0x7dc4ecde39b0a5af3ab481011b88a9d2283ca7772240c47e6fa4a255aee2c5ad",
+      "retryLookup": "0x7dc4ecde39b0a5af3ab481011b88a9d2283ca7772240c47e6fa4a255aee2c5ad",
+      "chain": {
+        "budgetDay": 20783,
+        "authorizedAt": "2026-11-26T01:40:51.000Z",
+        "closedAt": "2026-11-26T01:40:57.000Z"
+      }
+    },
+    {
+      "intent": "order-002",
+      "paymentId": "0x7f3e60d461eeb94681e17789991f359479d7eeb20a9c3bfd451d93254fd9401d",
+      "settlement": "https://explorer-test.qday.info/tx/0x4cc1508ea64d120f77c2be57735a8acb0992cbc9bf7aefe2f73cabbe97388466",
+      "retryLookup": "0x4cc1508ea64d120f77c2be57735a8acb0992cbc9bf7aefe2f73cabbe97388466",
+      "chain": {
+        "budgetDay": 20783,
+        "authorizedAt": "2026-11-26T01:41:07.000Z",
+        "closedAt": "2026-11-26T01:41:10.000Z"
+      }
+    },
+    {
+      "intent": "order-rejected-001",
+      "paymentId": "0x23afb47c26439b3f4856469cfcba6e82811eebe2efd23559df7cbb0a2b0e43ae",
+      "status": "rejected",
+      "release": "https://explorer-test.qday.info/tx/0x5b5171f5e9c1860953a7380e7a70439d2e37612ab7193a3b98c2907ac61669b2",
+      "chain": {
+        "budgetDay": 20783,
+        "authorizedAt": "2026-11-26T03:50:20.000Z",
+        "closedAt": "2026-11-26T03:50:25.000Z"
+      }
+    }
+  ]
+}

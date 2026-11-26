@@ -1,0 +1,11 @@
+node_modules/
+artifacts/
+cache/
+.env*
+*.keystore
+coverage/
+__pycache__/
+runtime/
+.DS_Store
+*.[pP][dD][fF]
+/public-demo/

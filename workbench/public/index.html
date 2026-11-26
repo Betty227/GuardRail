@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <title>GuardRail · Procurement payments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s7-3.5 7-10V5l-7-3-7 3v7c0 6.5 7 10 7 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><rect x="14.5" y="14.5" width="6" height="6" rx="1"/></symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Zm0 0v6h6M8 13h8m-8 4h5"/></symbol>
+    <symbol id="icon-ledger" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18m-11 0v11m-7-6h18"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 12 7-12 7z"/></symbol>
+    <symbol id="icon-retry" viewBox="0 0 24 24"><path d="M4 11a8 8 0 1 1 2 6m-2-6V5m0 6h6"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24"><path d="m6 6 12 12m0-12L6 18"/></symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9m7-1v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 4v11m-4-4 4 4 4-4M5 16v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24"><path d="M20 8V6a2 2 0 0 0-2-2H6a3 3 0 0 0 0 6h13a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3V7m18 7h-5a1 1 0 0 0 0 2h5"/></symbol>
+  </svg>
+  <header class="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#workbench"><span class="mark"><svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg></span> GuardRail</a>
+      <nav aria-label="Workspace">
+        <a href="#workbench"><svg class="icon" aria-hidden="true"><use href="#icon-grid"/></svg>Workbench</a>
+        <a href="#acceptance"><svg class="icon" aria-hidden="true"><use href="#icon-file"/></svg>Acceptance</a>
+        <a href="#reconciliation"><svg class="icon" aria-hidden="true"><use href="#icon-ledger"/></svg>Reconciliation</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <section id="workbench">
+      <div class="page-head">
+        <div><h1>Procurement workbench</h1><p>Review supplier reports and settle service fees after buyer acceptance.</p></div>
+      </div>
+      <ol class="flow" aria-label="Payment workflow">
+        <li><span class="step-num">1</span>Policy Reserve</li>
+        <li><span class="step-num">2</span>Supplier Delivery</li>
+        <li><span class="step-num">3</span>5-Rule Verification</li>
+        <li><span class="step-num">4</span>Capture / Void</li>
+      </ol>
+      <div class="workbench-grid">
+        <article class="card feature" id="replay">
+          <div class="card-top"><span class="mode live"><svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg>Aevum replay</span><span class="subtle network-label">TESTNET · 44005</span></div>
+          <h2>Verified settlement</h2>
+          <p>Inspect confirmed Aevum transactions, including a same-intent retry and a rejected payment released back to the vault.</p>
+          <div class="replay-metrics">
+            <div><span class="metric-label">Settled on Aevum</span><div class="metric"><span id="replay-fee" class="metric-value">—</span><span>tUSD8</span></div></div>
+            <div><span class="metric-label">Released after rejection</span><div class="metric"><span id="replay-released" class="metric-value">—</span><span>tUSD8</span></div></div>
+          </div>
+          <div id="replay-proof" class="proofs"></div>
+          <div id="replay-actions" class="actions"></div>
+        </article>
+        <article class="card sandbox-card">
+          <div class="card-top"><span class="mode local"><svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg>Local Sandbox</span><span class="subtle network-label">NO WALLET REQUIRED</span></div>
+          <h2>Run a synthetic order</h2>
+          <form id="purchase">
+            <div class="fields">
+              <label>Order format<select name="format"><option value="csv">CSV</option><option value="xml">XML</option></select></label>
+              <label>Paper quantity<input name="quantity" type="number" min="1" max="1000" value="10" required></label>
+            </div>
+            <div class="quote" id="quote" aria-live="polite"></div>
+            <label class="check"><input type="checkbox" name="fault"> Simulate an incorrect supplier report</label>
+            <div class="actions">
+              <button id="run" type="submit"><svg class="icon" aria-hidden="true"><use href="#icon-play"/></svg>Run purchase</button>
+              <button id="retry" class="secondary" type="button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-retry"/></svg>Retry same intent</button>
+            </div>
+            <p id="purchase-message" class="message" role="status"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+    <section id="acceptance" hidden>
+      <div class="page-head">
+        <div><h1>Buyer acceptance</h1><p>Compare the original order with the supplier report and the buyer's checks.</p></div>
+        <label class="purchase-picker">Purchase<select id="record-select"></select></label>
+      </div>
+      <div id="acceptance-summary" class="card summary"></div>
+      <div class="documents">
+        <article class="card code-card">
+          <div class="card-top"><h2><svg class="icon" aria-hidden="true"><use href="#icon-file"/></svg>Source order</h2><div class="code-tools"><span class="file-type" id="file-format"></span><button id="copy-input" class="secondary copy" type="button" aria-label="Copy source order"><svg class="icon" aria-hidden="true"><use href="#icon-copy"/></svg><span>Copy</span></button></div></div>
+          <pre id="input" tabindex="0" aria-label="Source order text"></pre>
+        </article>
+        <article class="card code-card">
+          <div class="card-top"><h2><svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg>Supplier report</h2><div class="code-tools"><span class="file-type">JSON</span><button id="copy-report" class="secondary copy" type="button" aria-label="Copy supplier report"><svg class="icon" aria-hidden="true"><use href="#icon-copy"/></svg><span>Copy</span></button></div></div>
+          <pre id="report" tabindex="0" aria-label="Supplier report text"></pre>
+        </article>
+      </div>
+      <article class="card rules"><h2>Acceptance checks</h2><ul id="checks"></ul></article>
+      <details class="card rules">
+        <summary>Payment controls</summary>
+        <ul class="control-list">
+          <li><strong>Pause</strong> Blocks new reservations and settlement. Authorized release remains available.</li>
+          <li><strong>Agent revocation</strong> Removes the agent’s authority to reserve. Existing reservations can still settle with a valid receipt before the deadline while the vault is unpaused.</li>
+          <li><strong>Early release</strong> The owner or verifier can release reserved funds before expiry. After expiry, anyone can release them. Release restores the original Hong Kong budget day’s capacity.</li>
+        </ul>
+      </details>
+    </section>
+    <section id="reconciliation" hidden>
+      <div class="page-head">
+        <div><h1>Finance reconciliation</h1><p>Match authorizations, settlement and released funds by purchase intent.</p></div>
+        <button class="secondary" id="csv" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg>Export CSV</button>
+      </div>
+      <div class="totals" id="totals"></div>
+      <div class="card table-card"><div class="table-wrap" tabindex="0" aria-label="Payment ledger">
+        <table>
+          <thead><tr><th scope="col">Purchase</th><th scope="col">Environment</th><th scope="col">Authorized (HKT)</th><th scope="col">Closed (HKT)</th><th scope="col">Status</th><th scope="col" class="numeric">Paid (tUSD8)</th><th scope="col">Evidence</th></tr></thead>
+          <tbody id="ledger"></tbody>
+        </table>
+      </div></div>
+    </section>
+    <p id="status" role="status"></p>
+  </main>
+</body>
+</html>
