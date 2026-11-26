@@ -12,6 +12,17 @@ Run `npm ci` and `npm run workbench`, then open [the local workbench](http://127
 
 ## Architecture and workflow
 
+```mermaid
+flowchart LR
+    Order["CSV or XML order"] --> Agent["Agent and supplier quote"]
+    Agent --> Reserve["Vault reserves tUSD8"]
+    Reserve --> Verify["Buyer checks supplier report"]
+    Verify -->|Pass| Capture["EIP-712 receipt and settlement"]
+    Verify -->|Fail| Void["Authorized release to the vault"]
+    Capture --> Ledger["Reconciliation and evidence"]
+    Void --> Ledger
+```
+
 1. The workbench builds a synthetic CSV or XML purchase order. The purchase service selects an eligible supplier by format and price.
 2. An authorized agent reserves the quoted fee in the vault under a stable purchase intent. Reusing the intent with the original quote resolves to the same payment ID.
 3. The buyer-side verifier checks the supplier report against the source order. On acceptance it signs an EIP-712 receipt that binds the payment and the file hashes. On rejection an authorized sender can release the reservation.
